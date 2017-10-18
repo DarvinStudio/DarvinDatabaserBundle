@@ -11,7 +11,7 @@ This bundle integrates "darvinstudio/databaser" with Symfony. It allows to easil
 $ composer require darvinstudio/darvin-databaser-bundle
 ```
 
-2. Register it in your AppKernel class:
+2. Register bundle in your AppKernel class:
 
 ```php
 // app/AppKernel.php
