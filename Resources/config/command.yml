@@ -1,0 +1,21 @@
+parameters:
+    darvin_databaser.command.pull.class: Darvin\Databaser\Command\PullCommand
+    darvin_databaser.command.pull.name:  "databaser:pull"
+
+    darvin_databaser.command.push.class: Darvin\Databaser\Command\PushCommand
+    darvin_databaser.command.push.name:  "databaser:push"
+
+services:
+    darvin_databaser.command.pull:
+        class: "%darvin_databaser.command.pull.class%"
+        arguments:
+            - "%darvin_databaser.command.pull.name%"
+        tags:
+            - { name: console.command }
+
+    darvin_databaser.command.push:
+        class: "%darvin_databaser.command.push.class%"
+        arguments:
+            - "%darvin_databaser.command.push.name%"
+        tags:
+            - { name: console.command }
